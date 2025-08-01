@@ -159,3 +159,143 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cosmic Energy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Orbitron', sans-serif;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      flex-direction: row;
+      width: 500vw;
+      height: 100vh;
+    }
+
+    section {
+      scroll-snap-align: start;
+      flex: 0 0 100vw;
+      height: 100vh;
+      position: relative;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      background: black;
+    }
+
+    .stars, .twinkling, .galaxy {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .stars {
+      background: url('https://raw.githubusercontent.com/Chan0304/The-Cosmic-Energy/main/images/stars.png') repeat;
+      animation: moveStars 200s linear infinite;
+    }
+
+    .twinkling {
+      background: url('https://raw.githubusercontent.com/Chan0304/The-Cosmic-Energy/main/images/twinkling.png') repeat;
+      animation: moveTwinkling 200s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    @keyframes moveTwinkling {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 5000px; }
+    }
+
+    video.bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .content {
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      margin: 0 0 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background video -->
+  <video autoplay muted loop class="bg-video">
+    <source src="https://raw.githubusercontent.com/Chan0304/The-Cosmic-Energy/main/videos/cosmic.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+
+  <!-- Page 1 -->
+  <section>
+    <div class="content">
+      <h1>Welcome to Cosmic Energy</h1>
+      <p>Feel the vibration of the Universe</p>
+    </div>
+  </section>
+
+  <!-- Page 2 -->
+  <section>
+    <div class="content">
+      <h2>Osho on Energy</h2>
+      <p>“You are not just the body or the mind. You are the silent watcher of all.”</p>
+    </div>
+  </section>
+
+  <!-- Page 3 -->
+  <section>
+    <div class="content">
+      <h2>Universal Connection</h2>
+      <p>Everything in the cosmos is interconnected. Meditate and realize your link.</p>
+    </div>
+  </section>
+
+  <!-- Page 4 -->
+  <section>
+    <div class="content">
+      <h2>Watch a Cosmic Film</h2>
+      <video width="600" controls>
+        <source src="https://raw.githubusercontent.com/Chan0304/The-Cosmic-Energy/main/videos/oshotalk.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </section>
+
+  <!-- Page 5 -->
+  <section>
+    <div class="content">
+      <h2>Gratitude</h2>
+      <p>Thank you for experiencing the journey of the cosmos.</p>
+    </div>
+  </section>
+
+</body>
+</html>
